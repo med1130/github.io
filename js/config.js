@@ -38,19 +38,19 @@ const SITE_CONFIG = {
   // اترك القيم كما هي أو استبدلها ببياناتك الحقيقية
   contacts: {
     // رقم الهاتف المباشر (صيغة دولية بدون مسافات، مثال: +213600000000)
-    phone: "+213000000000",
+    phone: "+213698077353",
 
     // رقم الواتساب (بدون رمز + أو الصفر الأول، مثال: 213600000000)
-    whatsapp: "213000000000",
+    whatsapp: "213698077353",
 
     // البريد الإلكتروني الرسمى
-    email: "contact@belkadi-elec.com"
+    email: "belkadi.mohammed90@gmail.com"
   },
 
   // 3. شبكات التواصل الاجتماعي | Social Media Links
   social: {
-    instagram: "https://instagram.com/your_username",
-    facebook: "https://facebook.com/your_username",
+    instagram: "https://www.instagram.com/prof.belkadi.med/",
+    facebook: "https://www.facebook.com/mohammed.belkadi.3",
     telegram: "https://t.me/your_username",
     youtube: "https://youtube.com/@your_username"
   },
