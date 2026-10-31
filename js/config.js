@@ -51,8 +51,8 @@ const SITE_CONFIG = {
   social: {
     instagram: "https://www.instagram.com/prof.belkadi.med/",
     facebook: "https://www.facebook.com/mohammed.belkadi.3",
-    telegram: "https://t.me/your_username",
-    youtube: "https://youtube.com/@your_username"
+    telegram: "https://t.me/MohammedBelkadi",
+    
   },
 
   // 4. إعدادات بطاقة vCard | vCard Settings
