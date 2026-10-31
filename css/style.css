@@ -1,0 +1,398 @@
+/**
+ * =================================================================
+ * الملف الرئيسي للتنسيقات والهوية البصرية | Main Stylesheet
+ * =================================================================
+ * الأستاذ محمد بلقاضي - الأستاذ في الهندسة الكهربائية
+ * Mohammed Belkadi - Electrical Engineering Professional Brand
+ * =================================================================
+ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap');
+
+/* CSS Variables / Design System */
+:root {
+  --navy: #0B1E3D;
+  --navy-light: #1A365D;
+  --gold: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #AA7C11;
+  --white: #FFFFFF;
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-600: #475569;
+  --gray-900: #0F172A;
+
+  --shadow-sm: 0 1px 3px rgba(11, 30, 61, 0.08);
+  --shadow-md: 0 4px 12px rgba(11, 30, 61, 0.12);
+  --shadow-lg: 0 12px 32px rgba(11, 30, 61, 0.16);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+/* Base Reset & Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Tajawal', 'Inter', sans-serif;
+  background-color: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Language & Direction Attributes */
+body[dir="rtl"] {
+  font-family: 'Tajawal', sans-serif;
+}
+
+body[dir="ltr"] {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Top Navbar / Language Switcher */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -12px;
+}
+
+.lang-switch {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  color: var(--navy);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.lang-switch:hover {
+  background: var(--navy);
+  color: var(--gold);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Common Base */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* 1. Hero Section */
+.hero-section {
+  text-align: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  border: none;
+  padding: 40px 24px;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 20px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  background: var(--white);
+}
+
+.badge-verified {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: var(--gold);
+  color: var(--navy);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.profile-name-ar {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.profile-name-en {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.profile-title {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--gold);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-bottom: 16px;
+}
+
+.profile-specialty {
+  font-size: 0.95rem;
+  color: var(--gray-200);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  color: var(--gray-200);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+body[dir="rtl"] .section-title::after {
+  left: auto;
+  right: 0;
+}
+
+.section-title i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+/* Buttons / Links Grid & List */
+.links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.social-btn, .contact-btn, .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.btn-arrow {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+/* Specific Social Brand Colors & Hover states */
+.social-btn.instagram .btn-icon { background: #FCE7F3; color: #DB2777; }
+.social-btn.facebook .btn-icon { background: #DBEAFE; color: #2563EB; }
+.social-btn.telegram .btn-icon { background: #E0F2FE; color: #0284C7; }
+.social-btn.youtube .btn-icon { background: #FEE2E2; color: #DC2626; }
+
+.contact-btn.whatsapp .btn-icon { background: #DCFCE7; color: #16A34A; }
+.contact-btn.phone .btn-icon { background: #FEF3C7; color: #D97706; }
+.contact-btn.email .btn-icon { background: #F1F5F9; color: #475569; }
+
+/* Primary CTA Button (Save Contact) */
+.action-btn.primary {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  border-color: var(--navy);
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 24px;
+  font-size: 1.05rem;
+  box-shadow: var(--shadow-md);
+}
+
+.action-btn.primary .btn-icon {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold);
+}
+
+.action-btn.primary:hover {
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hover Global for standard buttons */
+.social-btn:hover, .contact-btn:hover {
+  border-color: var(--navy);
+  background: var(--gray-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.social-btn:hover .btn-arrow, .contact-btn:hover .btn-arrow {
+  transform: translateX(4px);
+  color: var(--navy);
+}
+
+body[dir="rtl"] .social-btn:hover .btn-arrow,
+body[dir="rtl"] .contact-btn:hover .btn-arrow {
+  transform: translateX(-4px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--gray-200);
+  margin-top: auto;
+}
+
+.footer .brand-footer {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.footer .title-footer {
+  color: var(--gold-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footer .copyright {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 12px;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px 16px;
+  }
+
+  .profile-name-ar {
+    font-size: 1.5rem;
+  }
+}
