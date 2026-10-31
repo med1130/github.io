@@ -31,7 +31,7 @@ const SITE_CONFIG = {
     bioEn: "Welcome to my official digital space, where you can access my educational resources and direct contact channels.",
 
     // مسار الصورة الشخصية
-    avatar: "assets/images/profile-placeholder.svg"
+    avatar: "assets/images/profile-placeholder.png"
   },
 
   // 2. وسائل الاتصال المباشر | Direct Contact Info
